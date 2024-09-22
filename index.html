@@ -21,6 +21,21 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const text = "A Freelance Web Developer";
+		  let i = 0;
+		  const speed = 150; // Speed in milliseconds
+		  function typeWriter() {
+			if (i < text.length) {
+			  document.getElementById("typewriter").innerHTML += text.charAt(i);
+			  i++;
+			  setTimeout(typeWriter, speed);
+			}
+		  }
+		  typeWriter();
+		});
+	  </script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
@@ -47,48 +62,30 @@
 	    </div>
 	  </nav>
 	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	      <div class="slider-item ">
-	      	<div class="overlay"></div>
-	        <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-				<div class="one-third order-md-last img" style="background-image: url(images/me_3.png); height: 700px;">
-					<div class="overlay"></div>
-				</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Muhammad Awais</span></h1>
-			            <h2 class="mb-4">A Freelance Web Developer</h2>
-			            <p><a href="https://www.upwork.com/freelancers/~01c5c4a9dba8d0c20b" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-
-	      <div class="slider-item">
+		<div class="home-slider">
+		  <div class="slider-item">
 			<div class="overlay"></div>
 			<div class="container">
-				<div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-					<div class="one-third order-md-last img" style="background-image: url(images/me_3.png); height: 700px;">
-						<div class="overlay"></div>
-					</div>
-					<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
-						<div class="text">
-							<span class="subheading">Hello!</span>
-							<h1 class="mb-4 mt-3" style="white-space: nowrap;">I'm <span>web developer</span></h1>
-							<p>
-								<a href="https://www.upwork.com/freelancers/~01c5c4a9dba8d0c20b" class="btn btn-primary py-3 px-4">Hire me</a>
-								<a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
-							</p>
-						</div>
-					</div>
+			  <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
+				<div class="one-third order-md-last img" style="background-image: url(images/me_3.png); height: 550px; width: 500px">
+				  <div class="overlay"></div>
 				</div>
+				<div class="align-items-center">
+				  <div class="text" style="margin-top: 1rem;">
+					<span class="subheading">Hello!</span>
+					<h1 class="mb-4 mt-3">I'm Muhammad Awais</h1>
+					<h2 class="mb-4"><span id="typewriter"></span></h2>
+					<p>
+					  <a href="https://www.upwork.com/freelancers/~01c5c4a9dba8d0c20b" class="btn btn-primary py-3 px-4">Hire me</a>
+					  <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+					</p>
+				  </div>
+				</div>
+			  </div>
 			</div>
+		  </div>
 		</div>
-		
-    </section>
+	  </section>
 
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
